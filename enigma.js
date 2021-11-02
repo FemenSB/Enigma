@@ -28,18 +28,18 @@ class Reflector {
 };
 
 // Definition of standard Enigma M3 rotors:
-var rotorI    = new Rotor('EKMFLGDQVZNTOWYHXUSPAIBRCJ', 'Q', 'A');
-var rotorII   = new Rotor('AJDKSIRUXBLHWTMCQGZNPYFVOE', 'E', 'A');
-var rotorIII  = new Rotor('BDFHJLCPRTXVZNYEIWGAKMUSQO', 'V', 'A');
-var rotorIV   = new Rotor('ESOVPZJAYQUIRHXLNFTGKDCMWB', 'J', 'A');
-var rotorV    = new Rotor('VZBRGITYUPSDNHLXAWMJQOFECK', 'Z', 'A');
+rotors = [new Rotor('EKMFLGDQVZNTOWYHXUSPAIBRCJ', 'Q', 'A'),
+          new Rotor('AJDKSIRUXBLHWTMCQGZNPYFVOE', 'E', 'A'),
+          new Rotor('BDFHJLCPRTXVZNYEIWGAKMUSQO', 'V', 'A'),
+          new Rotor('ESOVPZJAYQUIRHXLNFTGKDCMWB', 'J', 'A'),
+          new Rotor('VZBRGITYUPSDNHLXAWMJQOFECK', 'Z', 'A')];
 
 // Definition of standard Enigma M3 reflectors:
 var ukwB = new Reflector('YRUHQSLDPXNGOKMIEBFZCWVJAT');
 var ukwC = new Reflector('FVPJIAOYEDRZXWGCTKUQSBNMHL');
 
 var enigma = {
-  rotors: [rotorI, rotorII, rotorIII],
+  rotors: [rotors[0], rotors[1], rotors[2]],
 
   reflector: ukwB,
 
