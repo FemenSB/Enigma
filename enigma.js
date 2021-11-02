@@ -51,7 +51,7 @@ var enigma = {
       this.rotors[2].position = (this.rotors[2].position + 1) % 26;
       this.rotors[1].position = (this.rotors[1].position + 1) % 26;
     } else { // If the slow rotor is not rotated, we test whether the middle rotor is going to be rotated
-      if(this.rotors[0].position == this.rotors[0].notch && rotated == 0) {this.rotors[1].position = (this.rotors[1].position + 1) % 26;}
+      if(this.rotors[0].position == this.rotors[0].notch) {this.rotors[1].position = (this.rotors[1].position + 1) % 26;}
     }
     this.rotors[0].position = (this.rotors[0].position + 1) % 26; // The fast rotor is rotated at every key press
 
