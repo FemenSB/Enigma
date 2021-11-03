@@ -17,9 +17,12 @@ selectRotor[1].value = '2';
 selectRotor[2].value = '3';
 
 const output = document.createTextNode('');
+const outputPositions = document.createTextNode('');
 document.body.appendChild(filteredInput);
 document.body.appendChild(document.createElement('p'));
 document.body.appendChild(output);
+document.body.appendChild(document.createElement('p'));
+document.body.appendChild(outputPositions);
 
 function encryptString(text) {
   var encryptedText = '';
@@ -48,4 +51,7 @@ runButton.addEventListener('click', (e) => {
   input = input.join('');
   filteredInput.nodeValue = input; // Display the input string
   output.nodeValue = encryptString(input); // Display the encrypted string
+  outputPositions.nodeValue = 'Final positions: ' + String.fromCharCode(enigma.rotors[2].position + 'A'.charCodeAt(0)) +
+                              ' - ' + String.fromCharCode(enigma.rotors[1].position + 'A'.charCodeAt(0)) + ' - ' +
+                              String.fromCharCode(enigma.rotors[0].position + 'A'.charCodeAt(0))
 });
