@@ -53,5 +53,5 @@ runButton.addEventListener('click', (e) => {
   output.nodeValue = encryptString(input); // Display the encrypted string
   outputPositions.nodeValue = 'Final positions: ' + String.fromCharCode(enigma.rotors[2].position + 'A'.charCodeAt(0)) +
                               ' - ' + String.fromCharCode(enigma.rotors[1].position + 'A'.charCodeAt(0)) + ' - ' +
-                              String.fromCharCode(enigma.rotors[0].position + 'A'.charCodeAt(0))
+                              String.fromCharCode(enigma.rotors[0].position + 'A'.charCodeAt(0));
 });
